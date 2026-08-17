@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Hope & Strength | Christ Life Restoration Ministries
+    </title>
+
+
+    <style>
+        /* =========================================
+           GENERAL STYLING
+           ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: linen;
+            color: #30253b;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           NAVIGATION BAR
+           ========================================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 6%;
+
+            background: rgba(44, 20, 70, 0.97);
+
+            box-shadow:
+                0 3px 15px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .church-name {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+
+        nav ul {
+            display: flex;
+
+            list-style: none;
+
+            gap: 25px;
+        }
+
+
+        nav ul li a {
+            color: white;
+
+            text-decoration: none;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        nav ul li a:hover {
+            color: #e6c76b;
+        }
+
+
+        /* =========================================
+           PAGE HEADER
+           ========================================= */
+
+        .page-header {
+
+            background:
+                linear-gradient(rgba(55, 20, 80, 0.92),
+                    rgba(85, 35, 120, 0.92));
+
+            color: white;
+
+            text-align: center;
+
+            padding: 90px 20px;
+
+        }
+
+
+        .page-header h1 {
+
+            font-size:
+                clamp(40px, 6vw, 65px);
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .page-header p {
+
+            max-width: 750px;
+
+            margin: auto;
+
+            font-size: 20px;
+
+        }
+
+
+        /* =========================================
+           INTRODUCTION
+           ========================================= */
+
+        .intro {
+
+            max-width: 900px;
+
+            margin: 50px auto;
+
+            padding: 0 25px;
+
+            text-align: center;
+
+        }
+
+
+        .intro h2 {
+
+            color: #6424a0;
+
+            font-size: 35px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .intro p {
+
+            font-size: 18px;
+
+        }
+
+
+        .important-message {
+
+            margin-top: 30px;
+
+            padding: 25px;
+
+            background:
+                linear-gradient(135deg,
+                    #f3e8ff,
+                    #fff5d9);
+
+            border-left:
+                6px solid #c9a24d;
+
+            border-radius: 10px;
+
+            font-size: 19px;
+
+        }
+
+
+        /* =========================================
+           PREACHING SECTION
+           ========================================= */
+
+        .preaching {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto 80px;
+
+            padding: 0 25px;
+
+        }
+
+
+        .preaching h2 {
+
+            text-align: center;
+
+            color: #54218a;
+
+            font-size: 35px;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .preaching-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+        .preach-card {
+
+            background: rgba(255, 255, 255, 0.92);
+
+            border: 1px solid #e7d7b2;
+
+            border-radius: 18px;
+
+            padding: 25px 22px;
+
+            box-shadow:
+                0 8px 22px rgba(55, 20, 80, 0.08);
+
+        }
+
+
+        .preach-tag {
+
+            display: inline-block;
+
+            margin-bottom: 12px;
+
+            background: #f5e7bb;
+
+            color: #4d2e71;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            letter-spacing: 0.08em;
+
+            padding: 7px 10px;
+
+            border-radius: 999px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .preach-card h3 {
+
+            color: #6f2dbd;
+
+            margin-bottom: 12px;
+
+            font-size: 22px;
+
+        }
+
+
+        .preach-card p {
+
+            font-size: 17px;
+
+            color: #443a4e;
+
+        }
+
+
+        /* =========================================
+           VERSES SECTION
+           ========================================= */
+
+        .verses {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 40px auto 80px;
+
+        }
+
+
+        .verses h2 {
+
+            text-align: center;
+
+            color: #54218a;
+
+            font-size: 35px;
+
+            margin-bottom: 40px;
+
+        }
+
+
+        /* =========================================
+           VERSE CARDS
+           ========================================= */
+
+        .verse-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+        .verse-card {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 8px 25px rgba(50, 25, 70, 0.12);
+
+            border-top:
+                5px solid #c9a24d;
+
+            transition: 0.3s;
+
+        }
+
+
+        .verse-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 12px 30px rgba(50, 25, 70, 0.18);
+
+        }
+
+
+        .verse-card h3 {
+
+            color: #6f2dbd;
+
+            margin-bottom: 15px;
+
+            font-size: 23px;
+
+        }
+
+
+        .verse-card blockquote {
+
+            font-size: 19px;
+
+            font-style: italic;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .verse-reference {
+
+            color: #8b6a1f;
+
+            font-weight: bold;
+
+        }
+
+
+        .encouragement {
+
+            margin-top: 15px;
+
+            color: #5a5061;
+
+        }
+
+
+        /* =========================================
+           FUTURE HOPE SECTION
+           ========================================= */
+
+        .future {
+
+            background:
+
+                linear-gradient(135deg,
+                    #54218a,
+                    #7b3bb2);
+
+            color: white;
+
+            padding: 70px 25px;
+
+            text-align: center;
+
+        }
+
+
+        .future-content {
+
+            max-width: 850px;
+
+            margin: auto;
+
+        }
+
+
+        .future h2 {
+
+            font-size: 38px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .future p {
+
+            font-size: 19px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .future-verse {
+
+            font-size: 23px;
+
+            font-style: italic;
+
+            margin: 30px auto;
+
+        }
+
+
+        .future-reference {
+
+            display: block;
+
+            color: #f0d27d;
+
+            font-size: 18px;
+
+            font-style: normal;
+
+            font-weight: bold;
+
+            margin-top: 10px;
+
+        }
+
+
+        /* =========================================
+           PRAYER SECTION
+           ========================================= */
+
+        .prayer {
+
+            max-width: 900px;
+
+            margin: 70px auto;
+
+            padding: 0 25px;
+
+            text-align: center;
+
+        }
+
+
+        .prayer-box {
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 8px 25px rgba(50, 25, 70, 0.12);
+
+        }
+
+
+        .prayer h2 {
+
+            color: #6424a0;
+
+            margin-bottom: 20px;
+
+            font-size: 32px;
+
+        }
+
+
+        .prayer p {
+
+            font-size: 19px;
+
+            font-style: italic;
+
+        }
+
+
+        /* =========================================
+           BUTTON
+           ========================================= */
+
+        .back-button {
+
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 13px 25px;
+
+            border-radius: 30px;
+
+            background: #c9a24d;
+
+            color: #2c1446;
+
+            text-decoration: none;
+
+            font-family: Arial, sans-serif;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+
+        }
+
+
+        .back-button:hover {
+
+            background: #e6c76b;
+
+            transform:
+                translateY(-3px);
+
+        }
+
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+
+        footer {
+
+            background: #2c1446;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+        }
+
+
+        footer p {
+
+            margin: 5px;
+
+        }
+
+
+        /* =========================================
+           MOBILE RESPONSIVE DESIGN
+           ========================================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+
+                flex-direction: column;
+
+                gap: 12px;
+
+            }
+
+
+            nav ul {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 12px 18px;
+
+            }
+
+
+            .verse-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .page-header {
+
+                padding: 70px 20px;
+
+            }
+
+
+            .page-header h1 {
+
+                font-size: 42px;
+
+            }
+
+
+            .page-header p {
+
+                font-size: 17px;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         NAVIGATION
+         ===================================== -->
+
+    <nav>
+
+        <div class="church-name">
+
+            Christ Life Restoration Ministries
+
+        </div>
+
+
+        <ul>
+
+            <li>
+                <a href="Christ%20Life.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="Hope%20&%20Strength.html">
+                    Hope &amp; Strength
+                </a>
+            </li>
+
+            <li>
+                <a href="About%20Us.html">
+                    About Us
+                </a>
+            </li>
+
+            <li>
+                <a href="Services.html">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="Contacts.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =====================================
+         PAGE HEADER
+         ===================================== -->
+
+    <header class="page-header">
+
+        <h1>
+            Hope &amp; Strength
+        </h1>
+
+        <p>
+            Bible verses to strengthen your faith,
+            encourage your heart, and remind you
+            that your future is in God's hands.
+        </p>
+
+    </header>
+
+
+
+    <!-- =====================================
+         INTRODUCTION
+         ===================================== -->
+
+    <section class="intro">
+
+        <h2>
+            There Is Hope for Tomorrow
+        </h2>
+
+
+        <p>
+
+            Life can sometimes bring difficult seasons.
+            You may be facing financial difficulties,
+            sickness, disappointment, grief, loneliness,
+            family problems, fear, or uncertainty about
+            the future.
+
+        </p>
+
+
+        <p style="margin-top: 15px;">
+
+            But your present situation does not have to
+            determine your future. God's Word reminds us
+            that He is with us, He cares for us, and He
+            can give us strength to continue.
+
+        </p>
+
+
+        <div class="important-message">
+
+            <strong>
+                Remember:
+            </strong>
+
+            You may be going through a difficult season,
+            but you are not going through it alone.
+            Keep trusting God. Keep praying.
+            Keep believing. There is still hope.
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         PREACHING / DEVOTIONALS
+         ===================================== -->
+
+    <section class="preaching">
+
+        <h2>
+            Fresh Encouragement from the Word
+        </h2>
+
+        <div class="preaching-grid">
+
+            <article class="preach-card">
+
+                <div class="preach-tag">
+                    Sermon Thought
+                </div>
+
+                <h3>
+                    Peace in the Storm
+                </h3>
+
+                <p>
+                    When life feels like a storm, the Lord still speaks peace to the troubled heart.
+                    We do not need to panic when God is in control.
+                </p>
+
+            </article>
+
+            <article class="preach-card">
+
+                <div class="preach-tag">
+                    Word of Life
+                </div>
+
+                <h3>
+                    Grace for the Weak
+                </h3>
+
+                <p>
+                    God meets you in your weakness and gives you grace to keep going.
+                    His strength is made perfect in your dependence on Him.
+                </p>
+
+            </article>
+
+            <article class="preach-card">
+
+                <div class="preach-tag">
+                    Daily Reminder
+                </div>
+
+                <h3>
+                    Rise Again in Faith
+                </h3>
+
+                <p>
+                    Every setback is not the end of your story. God is still writing your testimony,
+                    and tomorrow can still be a day of restoration.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         BIBLE VERSES
+         ===================================== -->
+
+    <section class="verses">
+
+        <h2>
+            Words of Hope from God's Word
+        </h2>
+
+
+        <div class="verse-grid">
+
+
+            <!-- VERSE 1 -->
+
+            <article class="verse-card">
+
+                <h3>
+                    🌅 Hope for the Future
+                </h3>
+
+                <blockquote>
+
+                    "For I know the plans I have for you,"
+                    declares the Lord, "plans to prosper you
+                    and not to harm you, plans to give you
+                    hope and a future."
+
+                </blockquote>
+
+                <div class="verse-reference">
+
+                    Jeremiah 29:11
+
+                </div>
+
+                <p class="encouragement">
+
+                    Your current circumstances are not the
+                    end of your story. God has a future and
+                    a purpose for your life.
+
+                </p>
+
+            </article>
+
+
+
+            <!-- VERSE 2 -->
+
+            <article class="verse-card">
+
+                <h3>
+                    💪 Strength in Difficult Times
+                </h3>
+
+                <blockquote>
+
+                    "I can do all this through him who
+                    gives me strength."
+
+                </blockquote>
+
+                <div class="verse-reference">
+
+                    Philippians 4:13
+
+                </div>
+
+                <p class="encouragement">
+
+                    When you feel that you cannot continue,
+                    remember that God can give you strength
+                    for another step.
+
+                </p>
+
+            </article>
+
+
+
+            <!-- VERSE 3 -->
+
+            <article class="verse-card">
+
+                <h3>
+                    🕊️ God Is With You
+                </h3>
+
+                <blockquote>
+
+                    "So do not fear, for I am with you;
+                    do not be dismayed, for I am your God.
+                    I will strengthen you and help you."
+
+                </blockquote>
+
+                <div class="verse-reference">
+
+                    Isaiah 41:10
+
+                </div>
+
+                <p class="encouragement">
+
+                    You do not have to face tomorrow
+                    alone. God's presence can give you
+                    courage when fear tries to take over.
+
+                </p>
+
+            </article>
+
+
+
+            <!-- VERSE 4 -->
+
+            <article class="verse-card">
+
+                <h3>
+                    ❤️ When Your Heart Is Broken
+                </h3>
+
+                <blockquote>
+
+                    "The Lord is close to the brokenhearted
+                    and saves those who are crushed in spirit."
+
+                </blockquote>
+
+                <div class="verse-reference">
+
+                    Psalm 34:18
+
+                </div>
+
+                <p class="encouragement">
+
+                    God sees your pain. He has not forgotten
+                    you, even during the moments when your
+                    heart feels broken.
+
+                </p>
+
+            </article>
+
+
+
+            <!-- VERSE 5 -->
+
+            <article class="verse-card">
+
+                <h3>
+                    🌧️ After the Storm
+                </h3>
+
+                <blockquote>
+
+                    "Weeping may stay for the night,
+                    but rejoicing comes in the morning."
+
+                </blockquote>
+
+                <div class="verse-reference">
+
+                    Psalm 30:5
+
+                </div>
+
+                <p class="encouragement">
+
+                    Difficult seasons do not last forever.
+                    Hold on to God and remember that a new
+                    morning can come.
+
+                </p>
+
+            </article>
+
+
+
+            <!-- VERSE 6 -->
+
+            <article class="verse-card">
+
+                <h3>
+                    🙏 When You Are Worried
+                </h3>
+
+                <blockquote>
+
+                    "Cast all your anxiety on him because
+                    he cares for you."
+
+                </blockquote>
+
+                <div class="verse-reference">
+
+                    1 Peter 5:7
+
+                </div>
+
+                <p class="encouragement">
+
+                    You don't have to carry every burden
+                    by yourself. Bring your worries to God
+                    in prayer.
+
+                </p>
+
+            </article>
+
+
+
+            <!-- VERSE 7 -->
+
+            <article class="verse-card">
+
+                <h3>
+                    🏔️ God Is Your Refuge
+                </h3>
+
+                <blockquote>
+
+                    "God is our refuge and strength,
+                    an ever-present help in trouble."
+
+                </blockquote>
+
+                <div class="verse-reference">
+
+                    Psalm 46:1
+
+                </div>
+
+                <p class="encouragement">
+
+                    When life feels unstable, God remains
+                    a place of safety and strength.
+
+                </p>
+
+            </article>
+
+
+
+            <!-- VERSE 8 -->
+
+            <article class="verse-card">
+
+                <h3>
+                    🌱 Trusting God's Plan
+                </h3>
+
+                <blockquote>
+
+                    "Trust in the Lord with all your heart
+                    and lean not on your own understanding."
+
+                </blockquote>
+
+                <div class="verse-reference">
+
+                    Proverbs 3:5
+
+                </div>
+
+                <p class="encouragement">
+
+                    You may not understand everything that
+                    is happening today, but you can continue
+                    trusting God with tomorrow.
+
+                </p>
+
+            </article>
+
+
+
+            <!-- VERSE 9 -->
+
+            <article class="verse-card">
+
+                <h3>
+                    ☀️ New Mercies
+                </h3>
+
+                <blockquote>
+
+                    "Because of the Lord's great love we are
+                    not consumed, for his compassions never
+                    fail. They are new every morning."
+
+                </blockquote>
+
+                <div class="verse-reference">
+
+                    Lamentations 3:22–23
+
+                </div>
+
+                <p class="encouragement">
+
+                    Every morning is another opportunity
+                    to begin again with God's mercy and
+                    faithfulness.
+
+                </p>
+
+            </article>
+
+
+
+            <!-- VERSE 10 -->
+
+            <article class="verse-card">
+
+                <h3>
+                    🌿 God Will Give You Rest
+                </h3>
+
+                <blockquote>
+
+                    "Come to me, all you who are weary and
+                    burdened, and I will give you rest."
+
+                </blockquote>
+
+                <div class="verse-reference">
+
+                    Matthew 11:28
+
+                </div>
+
+                <p class="encouragement">
+
+                    When you are tired physically,
+                    emotionally, or spiritually, bring
+                    your burdens to Christ.
+
+                </p>
+
+            </article>
+
+
+
+            <!-- VERSE 11 -->
+
+            <article class="verse-card">
+
+                <h3>
+                    ✨ God Works Through Your Journey
+                </h3>
+
+                <blockquote>
+
+                    "And we know that in all things God
+                    works for the good of those who love him."
+
+                </blockquote>
+
+                <div class="verse-reference">
+
+                    Romans 8:28
+
+                </div>
+
+                <p class="encouragement">
+
+                    Even when you cannot see the purpose
+                    of your current situation, continue
+                    trusting God's work in your life.
+
+                </p>
+
+            </article>
+
+
+
+            <!-- VERSE 12 -->
+
+            <article class="verse-card">
+
+                <h3>
+                    🕯️ Keep Your Faith
+                </h3>
+
+                <blockquote>
+
+                    "Let us hold unswervingly to the hope
+                    we profess, for he who promised is faithful."
+
+                </blockquote>
+
+                <div class="verse-reference">
+
+                    Hebrews 10:23
+
+                </div>
+
+                <p class="encouragement">
+
+                    God's faithfulness does not change
+                    according to your circumstances.
+                    Keep holding on to hope.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         FUTURE HOPE SECTION
+         ===================================== -->
+
+    <section class="future">
+
+        <div class="future-content">
+
+            <h2>
+                Your Future Is Not Without Hope
+            </h2>
+
+
+            <p>
+
+                Whatever you are facing today,
+                do not give up.
+
+            </p>
+
+
+            <p>
+
+                The road may be difficult,
+                but God can give you the strength
+                to walk through it.
+
+            </p>
+
+
+            <p>
+
+                Keep praying.
+                Keep believing.
+                Keep trusting.
+                Keep moving forward.
+
+            </p>
+
+
+            <div class="future-verse">
+
+                "May the God of hope fill you with
+                all joy and peace as you trust in him,
+                so that you may overflow with hope
+                by the power of the Holy Spirit."
+
+                <span class="future-reference">
+
+                    Romans 15:13
+
+                </span>
+
+            </div>
+
+
+            <a href="Christ%20Life.html" class="back-button">
+                ← Return to Home
+
+            </a>
+            <a href="About%20Us.html" class="back-button" style="margin-left: 15px;">
+                Learn More About Us
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         PRAYER
+         ===================================== -->
+
+    <section class="prayer">
+
+        <div class="prayer-box">
+
+            <h2>
+                A Prayer for You
+            </h2>
+
+
+            <p>
+
+                "Heavenly Father, we pray for everyone
+                visiting this page. Give them strength
+                when they are weak, peace when they are
+                troubled, comfort when they are hurting,
+                and hope when the future seems uncertain.
+                Help them to trust You one day at a time.
+                Remind them that they are loved, that they
+                are not alone, and that their lives have
+                purpose. May Your presence guide them and
+                Your Word strengthen them. In Jesus' name,
+                Amen."
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         FOOTER
+         ===================================== -->
+
+    <footer>
+
+        <p>
+            &copy; 2018–2026
+            Christ Life Restoration Ministries.
+        </p>
+
+        <p>
+            Faith • Hope • Love • Restoration
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

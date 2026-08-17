@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        About Us | Christ Life Restoration Ministries
+    </title>
+
+    <style>
+        /* =====================================================
+           GENERAL STYLING
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background-color: #fffaf0;
+            color: #30253b;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           NAVIGATION BAR
+        ===================================================== */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 6%;
+
+            background-color: #2c1446;
+
+            box-shadow:
+                0 3px 15px rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* Church name */
+
+        .church-name {
+            color: #ffffff;
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            white-space: nowrap;
+        }
+
+
+        /* Navigation list */
+
+        .nav-links {
+            display: flex;
+
+            align-items: center;
+
+            gap: 24px;
+
+            list-style: none;
+        }
+
+
+        /* Navigation links */
+
+        .nav-links a {
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            transition: 0.3s ease;
+        }
+
+
+        /* Navigation hover */
+
+        .nav-links a:hover {
+            color: #e6c76b;
+        }
+
+
+        /* Current page */
+
+        .nav-links .active {
+            color: #e6c76b;
+        }
+
+
+        /* =====================================================
+           PAGE HEADER
+        ===================================================== */
+
+        .page-header {
+
+            background:
+                linear-gradient(rgba(48, 15, 72, 0.95),
+                    rgba(105, 45, 145, 0.95));
+
+            color: #ffffff;
+
+            text-align: center;
+
+            padding: 90px 20px;
+
+        }
+
+
+        .page-header h1 {
+
+            font-size:
+                clamp(42px, 6vw, 68px);
+
+            line-height: 1.2;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .page-header p {
+
+            max-width: 800px;
+
+            margin: auto;
+
+            font-size: 20px;
+
+        }
+
+
+        .established {
+
+            display: inline-block;
+
+            margin-top: 22px;
+
+            padding: 8px 22px;
+
+            border: 2px solid #e6c76b;
+
+            border-radius: 30px;
+
+            color: #e6c76b;
+
+            font-family: Arial, sans-serif;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        /* =====================================================
+           MAIN CONTAINER
+        ===================================================== */
+
+        .container {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 70px 0;
+
+        }
+
+
+        /* =====================================================
+           INTRODUCTION
+        ===================================================== */
+
+        .introduction {
+
+            max-width: 900px;
+
+            margin: 0 auto 65px;
+
+            text-align: center;
+
+        }
+
+
+        .introduction h2 {
+
+            color: #6424a0;
+
+            font-size: 36px;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .introduction p {
+
+            font-size: 18px;
+
+            margin-bottom: 16px;
+
+        }
+
+
+        /* =====================================================
+           MISSION AND VISION
+        ===================================================== */
+
+        .mission-vision {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 30px;
+
+            margin-bottom: 70px;
+
+        }
+
+
+        .main-card {
+
+            background-color: #ffffff;
+
+            padding: 35px;
+
+            border-radius: 15px;
+
+            border-top: 5px solid #c9a24d;
+
+            box-shadow:
+                0 8px 25px rgba(50, 25, 70, 0.12);
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .main-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 12px 30px rgba(50, 25, 70, 0.17);
+
+        }
+
+
+        .main-card h2 {
+
+            color: #6f2dbd;
+
+            font-size: 30px;
+
+            margin-bottom: 16px;
+
+        }
+
+
+        .main-card p {
+
+            font-size: 17px;
+
+        }
+
+
+        /* =====================================================
+           SECTION TITLE
+        ===================================================== */
+
+        .section-title {
+
+            color: #54218a;
+
+            text-align: center;
+
+            font-size: 36px;
+
+            margin-bottom: 38px;
+
+        }
+
+
+        /* =====================================================
+           CORE VALUES
+        ===================================================== */
+
+        .values-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+            margin-bottom: 70px;
+
+        }
+
+
+        .value-card {
+
+            background-color: #ffffff;
+
+            padding: 30px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 7px 22px rgba(50, 25, 70, 0.10);
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .value-card:hover {
+
+            transform: translateY(-6px);
+
+        }
+
+
+        .value-icon {
+
+            font-size: 42px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .value-card h3 {
+
+            color: #6f2dbd;
+
+            font-size: 23px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .value-card p {
+
+            font-size: 16px;
+
+        }
+
+
+        /* =====================================================
+           WHAT WE BELIEVE
+        ===================================================== */
+
+        .beliefs {
+
+            background:
+                linear-gradient(135deg,
+                    #f2e7ff,
+                    #fff5d9);
+
+            padding: 45px;
+
+            border-left: 6px solid #c9a24d;
+
+            border-radius: 15px;
+
+            margin-bottom: 70px;
+
+        }
+
+
+        .beliefs h2 {
+
+            color: #54218a;
+
+            font-size: 31px;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .beliefs ul {
+
+            padding-left: 25px;
+
+        }
+
+
+        .beliefs li {
+
+            margin-bottom: 13px;
+
+            font-size: 17px;
+
+        }
+
+
+        /* =====================================================
+           LEADERSHIP
+        ===================================================== */
+
+        .leadership {
+
+            display: grid;
+
+            grid-template-columns: 1fr 2fr;
+
+            gap: 35px;
+
+            align-items: stretch;
+
+            margin-bottom: 70px;
+
+        }
+
+
+        .leader-photo {
+
+            min-height: 300px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: #ffffff;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            background:
+                linear-gradient(135deg,
+                    #54218a,
+                    #c9a24d);
+
+        }
+
+
+        .leader-icon {
+
+            font-size: 70px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .leader-photo p {
+
+            font-size: 18px;
+
+        }
+
+
+        .leader-info {
+
+            background-color: #ffffff;
+
+            padding: 35px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 8px 25px rgba(50, 25, 70, 0.12);
+
+        }
+
+
+        .leader-info h2 {
+
+            color: #6f2dbd;
+
+            font-size: 30px;
+
+            margin-bottom: 16px;
+
+        }
+
+
+        .leader-info p {
+
+            font-size: 17px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        /* =====================================================
+           SCRIPTURE SECTION
+        ===================================================== */
+
+        .scripture {
+
+            background:
+                linear-gradient(135deg,
+                    #54218a,
+                    #7c3bb2);
+
+            color: #ffffff;
+
+            text-align: center;
+
+            padding: 70px 25px;
+
+        }
+
+
+        .scripture-content {
+
+            max-width: 850px;
+
+            margin: auto;
+
+        }
+
+
+        .scripture h2 {
+
+            font-size: 35px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .scripture blockquote {
+
+            font-size: 23px;
+
+            font-style: italic;
+
+            line-height: 1.7;
+
+        }
+
+
+        .scripture cite {
+
+            display: block;
+
+            margin-top: 15px;
+
+            color: #f0d27d;
+
+            font-size: 18px;
+
+            font-style: normal;
+
+            font-weight: bold;
+
+        }
+
+
+        /* =====================================================
+           CALL TO ACTION
+        ===================================================== */
+
+        .cta {
+
+            text-align: center;
+
+            padding: 70px 20px;
+
+            background-color: #fffaf0;
+
+        }
+
+
+        .cta h2 {
+
+            color: #54218a;
+
+            font-size: 36px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .cta p {
+
+            max-width: 800px;
+
+            margin: auto;
+
+            font-size: 18px;
+
+        }
+
+
+        /* Buttons */
+
+        .button {
+
+            display: inline-block;
+
+            margin: 25px 8px 0;
+
+            padding: 13px 27px;
+
+            border-radius: 30px;
+
+            background-color: #c9a24d;
+
+            color: #2c1446;
+
+            text-decoration: none;
+
+            font-family: Arial, sans-serif;
+
+            font-weight: bold;
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .button:hover {
+
+            background-color: #e6c76b;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            background-color: #2c1446;
+
+            color: #ffffff;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+        }
+
+
+        footer p {
+
+            margin: 5px;
+
+        }
+
+
+        /* =====================================================
+           MOBILE RESPONSIVE DESIGN
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .navbar {
+
+                flex-direction: column;
+
+                gap: 12px;
+
+            }
+
+
+            .church-name {
+
+                text-align: center;
+
+                white-space: normal;
+
+            }
+
+
+            .nav-links {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 10px 17px;
+
+            }
+
+
+            .mission-vision {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .values-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+
+            .leadership {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .page-header {
+
+                padding: 65px 20px;
+
+            }
+
+
+            .page-header h1 {
+
+                font-size: 42px;
+
+            }
+
+
+            .page-header p {
+
+                font-size: 17px;
+
+            }
+
+
+            .container {
+
+                width: 92%;
+
+                padding: 50px 0;
+
+            }
+
+
+            .introduction h2 {
+
+                font-size: 30px;
+
+            }
+
+
+            .values-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .beliefs {
+
+                padding: 30px 22px;
+
+            }
+
+
+            .beliefs h2 {
+
+                font-size: 28px;
+
+            }
+
+
+            .scripture blockquote {
+
+                font-size: 20px;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+         
+         These links connect this page to EVERY other page
+         in the website.
+    ===================================================== -->
+
+    <nav class="navbar">
+
+
+        <!-- Church Name -->
+
+        <div class="church-name">
+
+            Christ Life Restoration Ministries
+
+        </div>
+
+
+        <!-- Navigation Links -->
+
+        <ul class="nav-links">
+
+
+            <!-- HOME -->
+
+            <li>
+
+                <a href="Christ%20Life.html">
+
+                    Home
+
+                </a>
+
+            </li>
+
+
+            <!-- HOPE AND STRENGTH -->
+
+            <li>
+
+                <a href="Hope%20&%20Strength.html">
+
+                    Hope &amp; Strength
+
+                </a>
+
+            </li>
+
+
+            <!-- ABOUT US - CURRENT PAGE -->
+
+            <li>
+
+                <a href="About%20Us.html" class="active">
+
+                    About Us
+
+                </a>
+
+            </li>
+
+            <li>
+                <a href="Services.html">Services</a>
+            </li>
+
+            <li>
+                <a href="Contacts.html">Contact</a>
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         PAGE HEADER
+    ===================================================== -->
+
+    <header class="page-header">
+
+
+        <h1>
+
+            About Us
+
+        </h1>
+
+
+        <p>
+
+            Discover who we are, what we believe,
+            and our desire to see lives restored
+            through Jesus Christ.
+
+        </p>
+
+
+        <div class="established">
+
+            EST. 2018
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ===================================================== -->
+
+    <main class="container">
+
+
+        <!-- =================================================
+             INTRODUCTION
+        ================================================= -->
+
+        <section class="introduction">
+
+
+            <h2>
+
+                Welcome to Christ Life Restoration Ministries
+
+            </h2>
+
+
+            <p>
+
+                Christ Life Restoration Ministries is a
+                Christ-centered ministry established in
+                2018 with a desire to share the love of
+                Jesus Christ and bring hope, healing,
+                encouragement, and restoration to people's
+                lives.
+
+            </p>
+
+
+            <p>
+
+                We believe that every person has value
+                and purpose in God's plan. No matter what
+                someone has experienced or what season
+                of life they are currently facing, there
+                is hope through Jesus Christ.
+
+            </p>
+
+
+            <p>
+
+                Our heart is to create a welcoming
+                community where people can worship God,
+                learn His Word, grow in faith, receive
+                prayer, and serve others.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             MISSION AND VISION
+        ================================================= -->
+
+        <section class="mission-vision">
+
+
+            <!-- MISSION -->
+
+            <div class="main-card">
+
+
+                <h2>
+
+                    Our Mission
+
+                </h2>
+
+
+                <p>
+
+                    Our mission is to proclaim the Gospel
+                    of Jesus Christ, teach the truth of
+                    God's Word, encourage people in their
+                    faith, and help individuals and families
+                    experience spiritual restoration.
+
+                </p>
+
+
+                <p style="margin-top: 15px;">
+
+                    We desire to reach people with the
+                    message of salvation, strengthen
+                    believers, support those going through
+                    difficult seasons, and encourage
+                    everyone to live a life that honors God.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- VISION -->
+
+            <div class="main-card">
+
+
+                <h2>
+
+                    Our Vision
+
+                </h2>
+
+
+                <p>
+
+                    Our vision is to see transformed lives,
+                    restored families, strong communities,
+                    and people who are passionate about
+                    following Jesus Christ.
+
+                </p>
+
+
+                <p style="margin-top: 15px;">
+
+                    We envision a growing church family
+                    where people discover their God-given
+                    purpose and become a positive influence
+                    in their homes, communities, and
+                    wherever God sends them.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             CORE VALUES
+        ================================================= -->
+
+        <section>
+
+
+            <h2 class="section-title">
+
+                Our Core Values
+
+            </h2>
+
+
+            <div class="values-grid">
+
+
+                <!-- FAITH -->
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        ✝️
+                    </div>
+
+
+                    <h3>
+                        Faith
+                    </h3>
+
+
+                    <p>
+
+                        We believe in Jesus Christ and
+                        seek to live every day by faith
+                        in God and His Word.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- LOVE -->
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        ❤️
+                    </div>
+
+
+                    <h3>
+                        Love
+                    </h3>
+
+
+                    <p>
+
+                        We seek to demonstrate the love
+                        of Christ by caring for people
+                        and serving our community.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- PRAYER -->
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        🙏
+                    </div>
+
+
+                    <h3>
+                        Prayer
+                    </h3>
+
+
+                    <p>
+
+                        We believe prayer is essential
+                        for our relationship with God
+                        and for every area of ministry.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- GOD'S WORD -->
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        📖
+                    </div>
+
+
+                    <h3>
+                        God's Word
+                    </h3>
+
+
+                    <p>
+
+                        We value the Bible as God's Word
+                        and seek to build our lives on
+                        its truth.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- RESTORATION -->
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        🕊️
+                    </div>
+
+
+                    <h3>
+                        Restoration
+                    </h3>
+
+
+                    <p>
+
+                        We believe God can restore hope,
+                        strengthen lives, heal hearts,
+                        and give people a new beginning.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- FELLOWSHIP -->
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        🤝
+                    </div>
+
+
+                    <h3>
+                        Fellowship
+                    </h3>
+
+
+                    <p>
+
+                        We believe believers grow stronger
+                        when they worship, pray, learn,
+                        and serve together.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             WHAT WE BELIEVE
+        ================================================= -->
+
+        <section class="beliefs">
+
+
+            <h2>
+
+                What We Believe
+
+            </h2>
+
+
+            <ul>
+
+
+                <li>
+
+                    We believe in one God, the Creator
+                    of heaven and earth.
+
+                </li>
+
+
+                <li>
+
+                    We believe in Jesus Christ, the Son
+                    of God and Savior of the world.
+
+                </li>
+
+
+                <li>
+
+                    We believe that salvation is found
+                    through faith in Jesus Christ.
+
+                </li>
+
+
+                <li>
+
+                    We believe the Holy Spirit works
+                    in the lives of God's people.
+
+                </li>
+
+
+                <li>
+
+                    We believe the Bible is God's Word
+                    and is foundational to Christian life.
+
+                </li>
+
+
+                <li>
+
+                    We believe in the power of prayer,
+                    worship, fellowship, and service.
+
+                </li>
+
+
+                <li>
+
+                    We believe God gives people hope,
+                    purpose, and the opportunity for
+                    restoration.
+
+                </li>
+
+
+                <li>
+
+                    We believe Christians are called to
+                    love God and love others.
+
+                </li>
+
+
+            </ul>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             LEADERSHIP
+        ================================================= -->
+
+        <section>
+
+
+            <h2 class="section-title">
+
+                Our Leadership
+
+            </h2>
+
+
+            <div class="leadership">
+
+
+                <!-- PASTOR PHOTO PLACEHOLDER -->
+
+                <div class="leader-photo">
+
+
+                    <div>
+
+
+                        <div class="leader-icon">
+
+                            🙏
+
+                        </div>
+
+
+                        <p>
+
+                            Pastor / Ministry Leader
+
+                        </p>
+
+
+                        <p style="font-size: 14px; margin-top: 8px;">
+
+                            Pastor's photograph can be
+                            added here.
+
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- LEADERSHIP INFORMATION -->
+
+                <div class="leader-info">
+
+
+                    <h2>
+
+                        Our Pastor and Leadership
+
+                    </h2>
+
+
+                    <p>
+
+                        Our church leadership is committed
+                        to serving God and His people with
+                        humility, integrity, love, and
+                        dedication.
+
+                    </p>
+
+
+                    <p>
+
+                        Our leaders seek to encourage the
+                        church family through biblical
+                        teaching, prayer, pastoral care,
+                        fellowship, and service.
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>
+                            Pastor:
+                        </strong>
+
+                        [Enter Pastor's Name]
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         SCRIPTURE
+    ===================================================== -->
+
+    <section class="scripture">
+
+
+        <div class="scripture-content">
+
+
+            <h2>
+
+                Our Foundation
+
+            </h2>
+
+
+            <blockquote>
+
+                "Therefore, if anyone is in Christ,
+                the new creation has come:
+                The old has gone, the new is here!"
+
+            </blockquote>
+
+
+            <cite>
+
+                2 Corinthians 5:17
+
+            </cite>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CALL TO ACTION
+    ===================================================== -->
+
+    <section class="cta">
+
+
+        <h2>
+
+            You Are Welcome Here
+
+        </h2>
+
+
+        <p>
+
+            Whether you are looking for a church family,
+            seeking prayer, searching for hope, or simply
+            wanting to know more about Jesus Christ,
+            we welcome you.
+
+        </p>
+        <!-- Home Page -->
+
+        <a href="Christ%20Life.html" class="button">
+
+            Learn More About Christ Life Restoration Ministries
+        </a>
+
+
+        <!-- HOPE PAGE -->
+
+        <a href="Hope%20&%20Strength.html" class="button">
+
+            Find Hope &amp; Strength
+
+        </a>
+
+
+        <!-- ABOUT PAGE -->
+
+        <a href="About%20Us.html" class="button">
+
+            Read About Us
+
+        </a>
+
+        <!-- CONTACT PAGE -->
+
+        <a
+            href="Contacts.html"
+            class="button"          
+        >
+            Contact Us
+        </a>
+
+        <! Services Page -->
+        <a
+            href="Services.html"
+            class="button"
+        >
+            Learn About Our Services
+        </a>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+
+        <p>
+
+            &copy; 2018–2026
+            Christ Life Restoration Ministries.
+
+        </p>
+
+
+        <p>
+
+            Faith • Hope • Love • Restoration
+
+        </p>
+
+
+    </footer>
+
+
+</body>
+
+</html>

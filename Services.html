@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Services | Christ Life Restoration Ministries
+    </title>
+
+    <style>
+
+        /* =====================================================
+           GENERAL STYLING
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background-color: #fffaf0;
+            color: #30253b;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           NAVIGATION BAR
+        ===================================================== */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 6%;
+
+            background-color: #2c1446;
+
+            box-shadow:
+                0 3px 15px rgba(0, 0, 0, 0.25);
+        }
+
+
+        .church-name {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            list-style: none;
+        }
+
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+
+        .nav-links a:hover {
+            color: #e6c76b;
+        }
+
+
+        /* Current page */
+
+        .nav-links .active {
+            color: #e6c76b;
+        }
+
+
+        /* =====================================================
+           PAGE HEADER
+        ===================================================== */
+
+        .page-header {
+            background:
+                linear-gradient(
+                    rgba(48, 15, 72, 0.95),
+                    rgba(105, 45, 145, 0.95)
+                );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 90px 20px;
+        }
+
+
+        .page-header h1 {
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+
+        .page-header p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 20px;
+        }
+
+
+        /* =====================================================
+           INTRODUCTION
+        ===================================================== */
+
+        .intro {
+            max-width: 900px;
+            margin: auto;
+            padding: 70px 20px 45px;
+            text-align: center;
+        }
+
+
+        .intro h2 {
+            color: #6424a0;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+
+        .intro p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+
+        /* =====================================================
+           SECTION TITLE
+        ===================================================== */
+
+        .section-title {
+            color: #54218a;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 35px;
+        }
+
+
+        /* =====================================================
+           WEEKLY SERVICES
+        ===================================================== */
+
+        .schedule-section {
+            width: 90%;
+            max-width: 1100px;
+            margin: 20px auto 70px;
+        }
+
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+
+        .schedule-card {
+            background-color: white;
+
+            text-align: center;
+
+            padding: 30px 25px;
+
+            border-radius: 15px;
+
+            border-top: 5px solid #c9a24d;
+
+            box-shadow:
+                0 8px 25px
+                rgba(50, 25, 70, 0.12);
+
+            transition: 0.3s ease;
+        }
+
+
+        .schedule-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(50, 25, 70, 0.17);
+        }
+
+
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
+
+
+        .schedule-card h3 {
+            color: #6f2dbd;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+
+        .day {
+            color: #8b6a1f;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+
+        .time {
+            font-size: 17px;
+            margin-top: 5px;
+        }
+
+
+        /* =====================================================
+           MINISTRIES
+        ===================================================== */
+
+        .ministries {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto 80px;
+        }
+
+
+        .ministry-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+        }
+
+
+        .ministry-card {
+            background-color: white;
+
+            padding: 32px;
+
+            border-radius: 15px;
+
+            border-left: 5px solid #c9a24d;
+
+            box-shadow:
+                0 8px 25px
+                rgba(50, 25, 70, 0.10);
+
+            transition: 0.3s ease;
+        }
+
+
+        .ministry-card:hover {
+            transform: translateY(-5px);
+        }
+
+
+        .ministry-card h3 {
+            color: #6f2dbd;
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+
+        .ministry-card p {
+            font-size: 17px;
+        }
+
+
+        /* =====================================================
+           WORSHIP SECTION
+        ===================================================== */
+
+        .worship {
+            background:
+                linear-gradient(
+                    135deg,
+                    #54218a,
+                    #7c3bb2
+                );
+
+            color: white;
+
+            padding: 70px 25px;
+
+            text-align: center;
+        }
+
+
+        .worship-content {
+            max-width: 850px;
+            margin: auto;
+        }
+
+
+        .worship h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+
+        .worship p {
+            font-size: 19px;
+            margin-bottom: 15px;
+        }
+
+
+        .worship-verse {
+            margin-top: 30px;
+            font-size: 22px;
+            font-style: italic;
+        }
+
+
+        .worship-reference {
+            display: block;
+            margin-top: 10px;
+            color: #f0d27d;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: bold;
+        }
+
+
+        /* =====================================================
+           WHAT TO EXPECT
+        ===================================================== */
+
+        .expect {
+            width: 90%;
+            max-width: 1000px;
+            margin: 70px auto;
+        }
+
+
+        .expect-box {
+            background:
+                linear-gradient(
+                    135deg,
+                    #f2e7ff,
+                    #fff5d9
+                );
+
+            padding: 40px;
+
+            border-left: 6px solid #c9a24d;
+
+            border-radius: 15px;
+        }
+
+
+        .expect-box h2 {
+            color: #54218a;
+            font-size: 31px;
+            margin-bottom: 20px;
+        }
+
+
+        .expect-box ul {
+            padding-left: 25px;
+        }
+
+
+        .expect-box li {
+            margin-bottom: 12px;
+            font-size: 17px;
+        }
+
+
+        /* =====================================================
+           CALL TO ACTION
+        ===================================================== */
+
+        .cta {
+            text-align: center;
+            background-color: #fffaf0;
+            padding: 70px 20px;
+        }
+
+
+        .cta h2 {
+            color: #54218a;
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+
+        .cta p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+
+        .button {
+            display: inline-block;
+
+            margin: 25px 8px 0;
+
+            padding: 13px 27px;
+
+            border-radius: 30px;
+
+            background-color: #c9a24d;
+
+            color: #2c1446;
+
+            text-decoration: none;
+
+            font-family: Arial, sans-serif;
+
+            font-weight: bold;
+
+            transition: 0.3s ease;
+        }
+
+
+        .button:hover {
+            background-color: #e6c76b;
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background-color: #2c1446;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+
+        footer p {
+            margin: 5px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE DESIGN
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+
+            .church-name {
+                text-align: center;
+                white-space: normal;
+            }
+
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px 17px;
+            }
+
+
+            .schedule-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .ministry-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .page-header {
+                padding: 65px 20px;
+            }
+
+
+            .page-header h1 {
+                font-size: 42px;
+            }
+
+
+            .page-header p {
+                font-size: 17px;
+            }
+
+
+            .intro h2 {
+                font-size: 30px;
+            }
+
+
+            .section-title {
+                font-size: 30px;
+            }
+
+
+            .expect-box {
+                padding: 30px 22px;
+            }
+
+
+            .worship-verse {
+                font-size: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ===================================================== -->
+
+    <nav class="navbar">
+
+
+        <div class="church-name">
+
+            Christ Life Restoration Ministries
+
+        </div>
+
+
+        <ul class="nav-links">
+
+
+            <!-- HOME -->
+
+            <li>
+
+                <a href="Christ%20Life.html">
+
+                    Home
+
+                </a>
+
+            </li>
+
+
+            <!-- HOPE AND STRENGTH -->
+
+            <li>
+
+                <a href="Hope%20&%20Strength.html">
+
+                    Hope &amp; Strength
+
+                </a>
+
+            </li>
+
+
+            <!-- ABOUT US -->
+
+            <li>
+
+                <a href="About%20Us.html">
+
+                    About Us
+
+                </a>
+
+            </li>
+
+
+            <!-- SERVICES - CURRENT PAGE -->
+
+            <li>
+
+                <a
+                    href="Services.html"
+                    class="active"
+                >
+
+                    Services
+
+                </a>
+
+            </li>
+
+
+            <!-- CONTACT -->
+
+            <li>
+
+                <a href="Contacts.html">
+
+                    Contact
+
+                </a>
+
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         PAGE HEADER
+    ===================================================== -->
+
+    <header class="page-header">
+
+        <h1>
+
+            Our Services
+
+        </h1>
+
+
+        <p>
+
+            Come and worship with us, grow in God's Word,
+            build meaningful relationships, and experience
+            the love of Christ.
+
+        </p>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         INTRODUCTION
+    ===================================================== -->
+
+    <section class="intro">
+
+        <h2>
+
+            Worship, Grow &amp; Serve
+
+        </h2>
+
+
+        <p>
+
+            At Christ Life Restoration Ministries,
+            we believe that church is more than a place
+            to attend. It is a family where we worship
+            together, learn God's Word, pray together,
+            encourage one another, and serve our community.
+
+        </p>
+
+
+        <p>
+
+            Everyone is welcome. Whether you have been
+            following Christ for many years or you are
+            simply searching for answers and hope,
+            there is a place for you here.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WEEKLY SERVICE TIMES
+         
+         Change the times below to your actual church
+         service times.
+    ===================================================== -->
+
+    <section class="schedule-section">
+
+        <h2 class="section-title">
+
+            Weekly Services
+
+        </h2>
+
+
+        <div class="schedule-grid">
+
+
+            <!-- SUNDAY WORSHIP -->
+
+            <div class="schedule-card">
+
+                <div class="service-icon">
+
+                    ⛪
+
+                </div>
+
+
+                <h3>
+
+                    Sunday Worship
+
+                </h3>
+
+
+                <div class="day">
+
+                    Every Sunday
+
+                </div>
+
+
+                <div class="time">
+
+                    09:00 AM – 12:00 PM
+
+                </div>
+
+
+                <p style="margin-top: 12px;">
+
+                    Join us for worship, praise,
+                    prayer, fellowship, and the
+                    preaching of God's Word.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- BIBLE STUDY -->
+
+            <div class="schedule-card">
+
+                <div class="service-icon">
+
+                    📖
+
+                </div>
+
+
+                <h3>
+
+                    Bible Study
+
+                </h3>
+
+
+                <div class="day">
+
+                    Every Wednesday
+
+                </div>
+
+
+                <div class="time">
+
+                    05:30 PM – 07:00 PM
+
+                </div>
+
+
+                <p style="margin-top: 12px;">
+
+                    Come and study God's Word with us
+                    as we grow together in understanding
+                    and faith.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- PRAYER MEETING -->
+
+            <div class="schedule-card">
+
+                <div class="service-icon">
+
+                    🙏
+
+                </div>
+
+
+                <h3>
+
+                    Prayer Meeting
+
+                </h3>
+
+
+                <div class="day">
+
+                    Every Friday
+
+                </div>
+
+
+                <div class="time">
+
+                    05:30 PM – 07:00 PM
+
+                </div>
+
+
+                <p style="margin-top: 12px;">
+
+                    Join us as we seek God together
+                    through prayer and intercession.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MINISTRIES
+    ===================================================== -->
+
+    <section class="ministries">
+
+        <h2 class="section-title">
+
+            Our Ministries
+
+        </h2>
+
+
+        <div class="ministry-grid">
+
+
+            <!-- PRAYER MINISTRY -->
+
+            <div class="ministry-card">
+
+                <h3>
+
+                    🙏 Prayer Ministry
+
+                </h3>
+
+
+                <p>
+
+                    We believe in the power of prayer.
+                    Our prayer ministry provides an
+                    opportunity for people to come
+                    together, seek God's guidance,
+                    intercede for others, and bring
+                    their needs before the Lord.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- YOUTH MINISTRY -->
+
+            <div class="ministry-card">
+
+                <h3>
+
+                    🌟 Youth Ministry
+
+                </h3>
+
+
+                <p>
+
+                    Our youth ministry seeks to help
+                    young people develop a strong
+                    relationship with Jesus Christ,
+                    discover their purpose, build
+                    positive friendships, and grow
+                    in God's Word.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- WOMEN'S MINISTRY -->
+
+            <div class="ministry-card">
+
+                <h3>
+
+                    🌷 Women's Ministry
+
+                </h3>
+
+
+                <p>
+
+                    A place for women to encourage
+                    one another, grow spiritually,
+                    pray together, build friendships,
+                    and support one another through
+                    life's different seasons.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- MEN'S MINISTRY -->
+
+            <div class="ministry-card">
+
+                <h3>
+
+                    🛡️ Men's Ministry
+
+                </h3>
+
+
+                <p>
+
+                    Our men's ministry encourages men
+                    to grow in faith, become stronger
+                    spiritual leaders, support their
+                    families, and serve God and their
+                    communities.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- COMMUNITY OUTREACH -->
+
+            <div class="ministry-card">
+
+                <h3>
+
+                    ❤️ Community Outreach
+
+                </h3>
+
+
+                <p>
+
+                    We seek to demonstrate the love
+                    of Christ beyond the church through
+                    acts of kindness, community support,
+                    evangelism, and service to those
+                    in need.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- PASTORAL CARE -->
+
+            <div class="ministry-card">
+
+                <h3>
+
+                    🕊️ Pastoral Care &amp; Counseling
+
+                </h3>
+
+
+                <p>
+
+                    We provide spiritual encouragement,
+                    prayer, and pastoral support for
+                    people facing difficult seasons,
+                    family challenges, grief, and
+                    other life circumstances.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WORSHIP SECTION
+    ===================================================== -->
+
+    <section class="worship">
+
+        <div class="worship-content">
+
+            <h2>
+
+                Come and Worship With Us
+
+            </h2>
+
+
+            <p>
+
+                You don't have to have everything
+                figured out before coming to church.
+
+            </p>
+
+
+            <p>
+
+                Come as you are. Come with your questions.
+                Come with your burdens. Come with your
+                hopes and dreams.
+
+            </p>
+
+
+            <p>
+
+                We believe that God meets us where we are
+                and leads us into His purpose for our lives.
+
+            </p>
+
+
+            <div class="worship-verse">
+
+                "I was glad when they said unto me,
+                Let us go into the house of the Lord."
+
+                <span class="worship-reference">
+
+                    Psalm 122:1
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WHAT TO EXPECT
+    ===================================================== -->
+
+    <section class="expect">
+
+        <div class="expect-box">
+
+            <h2>
+
+                What Can You Expect?
+
+            </h2>
+
+
+            <ul>
+
+                <li>
+
+                    A warm and welcoming church family.
+
+                </li>
+
+
+                <li>
+
+                    Worship and praise centered
+                    on Jesus Christ.
+
+                </li>
+
+
+                <li>
+
+                    Biblical teaching and encouragement
+                    from God's Word.
+
+                </li>
+
+
+                <li>
+
+                    Opportunities to pray and receive
+                    spiritual encouragement.
+
+                </li>
+
+
+                <li>
+
+                    Fellowship with other believers.
+
+                </li>
+
+
+                <li>
+
+                    Opportunities to serve God and
+                    the community.
+
+                </li>
+
+
+                <li>
+
+                    A place where you can grow in your
+                    relationship with Jesus Christ.
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CALL TO ACTION
+    ===================================================== -->
+
+    <section class="cta">
+
+        <h2>
+
+            We Would Love to Welcome You
+
+        </h2>
+
+
+        <p>
+
+            Plan your visit and join us for worship.
+            If you have questions about our services,
+            ministries, or church, please get in touch
+            with us.
+
+        </p>
+
+
+        <!-- CONTACT PAGE -->
+
+        <a
+            href="Contacts.html"
+            class="button"
+        >
+
+            Contact Us
+
+        </a>
+
+
+        <!-- ABOUT PAGE -->
+
+        <a
+            href="About%20Us.html"
+            class="button"
+        >
+
+            Learn More About Us
+
+        </a>
+
+
+        <!-- HOPE PAGE -->
+
+        <a
+            href="Hope%20&%20Strength.html"
+            class="button"
+        >
+
+            Find Hope &amp; Strength
+
+        </a>
+
+        <!-- HOME PAGE -->
+
+        <a
+            href="Christ%20Life.html"
+            class="button"
+        >
+        
+            Return to Home      
+    </a>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <p>
+
+            &copy; 2018–2026
+            Christ Life Restoration Ministries.
+
+        </p>
+
+
+        <p>
+
+            Faith • Hope • Love • Restoration
+
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
